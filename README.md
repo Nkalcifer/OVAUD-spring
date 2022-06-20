@@ -1,6 +1,5 @@
-# OVAUD-spring!
-[logo ova](https://i.ibb.co/VxC5hxN/asda.jpg)
-
+![logo ova](https://i.ibb.co/VxC5hxN/asda.jpg)
+# OVAUD-spring
 # Herramienta de Autor para la creación de OVAS
 ## Indice
 1. [Información General](#Información-General)
