@@ -5,7 +5,6 @@ import org.springframework.core.serializer.support.SerializingConverter;
 import com.fasterxml.jackson.databind.ser.std.StdKeySerializers.Default;
 
 import java.io.Serializable;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -97,6 +96,4 @@ public class Rol implements Serializable{
     public String toString() {
         return "Rol [description=" + description + ", id=" + id + ", name=" + name + "]";
     }
-    
-    
 }
