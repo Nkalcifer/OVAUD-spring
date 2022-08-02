@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Diseño de OVAs</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome JS -->
+    <script src="https://kit.fontawesome.com/54c0f9a846.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header menu-title">
+                <h3>OVA UD</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="#home">
+                        <i class="fas fa-home"></i>
+                        Inicio
+                    </a>
+                </li>
+                <li>
+                    <a href="#templates">
+                        <i class="fa-regular fa-object-group"></i>
+                        Plantillas
+                    </a>
+                    <a href="#elements">
+                        <i class="fa-brands fa-elementor"></i>
+                        Elementos
+                    </a>
+                </li>
+                <li>
+                    <a href="#text">
+                        <i class="fa-solid fa-font"></i>
+                        Texto
+                    </a>
+                </li>
+                <li>
+                    <a href="#audio">
+                        <i class="fa-solid fa-music"></i>
+                        Audio
+                    </a>
+                </li>
+                <li>
+                    <a href="#code">
+                        <i class="fa-solid fa-code"></i>
+                        Codigo
+                    </a>
+                </li>
+                <li>
+                    <a href="#more">
+                        <i class="fa-solid fa-ellipsis"></i>
+                        Mas
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="list-unstyled CTAs">
+                <li>
+                    <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a>
+                </li>
+                <li>
+                    <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info ">
+                        <span>Contraer</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Sesión</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Compartir</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Descargar</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Mas</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+
+            <div>
+                <canvas width="1000" height="1600" style="align-items: center;">
+                    An alternative text describing what your canvas displays.
+                </canvas>
+            </div>
+
+            <div class="line"></div>
+
+        </div>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        var valor = false
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                var uno = document.getElementById('sidebarCollapse');
+                $('#sidebar').toggleClass('active');
+                valor ? uno.innerText = "Contraer" : uno.innerText = "Expandir";
+                valor = !valor
+            });
+        });
+        window.onload = function () {
+            document.querySelector('.boton').addEventListener('click', function () {
+                document.querySelector('.container').classList.toggle('invisible');
+                this.classList.toggle('mif-chevron-right');
+            });
+        }
+        const canvas = document.querySelector('canvas');
+        const ctx = canvas.getContext('2d');
+        ctx.fillStyle = 'grey';
+        ctx.fillRect(10, 10, 1600, 1600);
+    </script>
+</body>
+
+</html>
